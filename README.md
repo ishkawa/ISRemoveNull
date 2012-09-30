@@ -29,7 +29,7 @@ result:
 
 - remove NSNull from NSDictionary
 
-```
+```objectivec
 NSArray *invalid = @[ @"hoge", @"fuga", [NSNull null], @"piyo" ];
 NSArray *valid = [invalid arrayByRemovingNull];
 ```
