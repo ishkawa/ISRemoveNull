@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		779FC4F5161700D3007CD02C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779FC4F4161700D3007CD02C /* SenTestingKit.framework */; };
+		779FC4F6161700D3007CD02C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77322E031616FB11006CE070 /* UIKit.framework */; };
+		779FC4F7161700D3007CD02C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77322E051616FB11006CE070 /* Foundation.framework */; };
+		779FC4FD161700D3007CD02C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 779FC4FB161700D3007CD02C /* InfoPlist.strings */; };
+		779FC500161700D3007CD02C /* ISRemoveNullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 779FC4FF161700D3007CD02C /* ISRemoveNullTests.m */; };
+		779FC50616170186007CD02C /* NSDictionary+RemoveNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 77322E211616FB6F006CE070 /* NSDictionary+RemoveNull.m */; };
+		779FC50716170186007CD02C /* NSArray+RemoveNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 779FC4EB1616FE56007CD02C /* NSArray+RemoveNull.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77322E031616FB11006CE070 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		77322E051616FB11006CE070 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77322E071616FB11006CE070 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		77322E201616FB6F006CE070 /* NSDictionary+RemoveNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RemoveNull.h"; sourceTree = "<group>"; };
+		77322E211616FB6F006CE070 /* NSDictionary+RemoveNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RemoveNull.m"; sourceTree = "<group>"; };
+		779FC4EA1616FE56007CD02C /* NSArray+RemoveNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RemoveNull.h"; sourceTree = "<group>"; };
+		779FC4EB1616FE56007CD02C /* NSArray+RemoveNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RemoveNull.m"; sourceTree = "<group>"; };
+		779FC4F3161700D3007CD02C /* ISRemoveNullTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISRemoveNullTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		779FC4F4161700D3007CD02C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		779FC4FA161700D3007CD02C /* ISRemoveNullTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ISRemoveNullTests-Info.plist"; sourceTree = "<group>"; };
+		779FC4FC161700D3007CD02C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		779FC4FE161700D3007CD02C /* ISRemoveNullTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISRemoveNullTests.h; sourceTree = "<group>"; };
+		779FC4FF161700D3007CD02C /* ISRemoveNullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISRemoveNullTests.m; sourceTree = "<group>"; };
+		779FC501161700D3007CD02C /* ISRemoveNullTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISRemoveNullTests-Prefix.pch"; sourceTree = "<group>"; };
+		779FC50516170125007CD02C /* ISRemoveNull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISRemoveNull.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		779FC4EF161700D3007CD02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779FC4F5161700D3007CD02C /* SenTestingKit.framework in Frameworks */,
+				779FC4F6161700D3007CD02C /* UIKit.framework in Frameworks */,
+				779FC4F7161700D3007CD02C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77322DF41616FB11006CE070 = {
+			isa = PBXGroup;
+			children = (
+				77322E091616FB11006CE070 /* ISRemoveNull */,
+				779FC4F8161700D3007CD02C /* ISRemoveNullTests */,
+				77322E021616FB11006CE070 /* Frameworks */,
+				77322E001616FB11006CE070 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77322E001616FB11006CE070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				779FC4F3161700D3007CD02C /* ISRemoveNullTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77322E021616FB11006CE070 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77322E031616FB11006CE070 /* UIKit.framework */,
+				77322E051616FB11006CE070 /* Foundation.framework */,
+				77322E071616FB11006CE070 /* CoreGraphics.framework */,
+				779FC4F4161700D3007CD02C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77322E091616FB11006CE070 /* ISRemoveNull */ = {
+			isa = PBXGroup;
+			children = (
+				779FC50516170125007CD02C /* ISRemoveNull.h */,
+				77322E201616FB6F006CE070 /* NSDictionary+RemoveNull.h */,
+				77322E211616FB6F006CE070 /* NSDictionary+RemoveNull.m */,
+				779FC4EA1616FE56007CD02C /* NSArray+RemoveNull.h */,
+				779FC4EB1616FE56007CD02C /* NSArray+RemoveNull.m */,
+			);
+			path = ISRemoveNull;
+			sourceTree = "<group>";
+		};
+		779FC4F8161700D3007CD02C /* ISRemoveNullTests */ = {
+			isa = PBXGroup;
+			children = (
+				779FC4FE161700D3007CD02C /* ISRemoveNullTests.h */,
+				779FC4FF161700D3007CD02C /* ISRemoveNullTests.m */,
+				779FC4F9161700D3007CD02C /* Supporting Files */,
+			);
+			path = ISRemoveNullTests;
+			sourceTree = "<group>";
+		};
+		779FC4F9161700D3007CD02C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				779FC4FA161700D3007CD02C /* ISRemoveNullTests-Info.plist */,
+				779FC4FB161700D3007CD02C /* InfoPlist.strings */,
+				779FC501161700D3007CD02C /* ISRemoveNullTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		779FC4F2161700D3007CD02C /* ISRemoveNullTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 779FC502161700D3007CD02C /* Build configuration list for PBXNativeTarget "ISRemoveNullTests" */;
+			buildPhases = (
+				779FC4EE161700D3007CD02C /* Sources */,
+				779FC4EF161700D3007CD02C /* Frameworks */,
+				779FC4F0161700D3007CD02C /* Resources */,
+				779FC4F1161700D3007CD02C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISRemoveNullTests;
+			productName = ISRemoveNullTests;
+			productReference = 779FC4F3161700D3007CD02C /* ISRemoveNullTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77322DF61616FB11006CE070 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IS;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Yosuke Ishikawa";
+			};
+			buildConfigurationList = 77322DF91616FB11006CE070 /* Build configuration list for PBXProject "ISRemoveNull" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77322DF41616FB11006CE070;
+			productRefGroup = 77322E001616FB11006CE070 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				779FC4F2161700D3007CD02C /* ISRemoveNullTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		779FC4F0161700D3007CD02C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779FC4FD161700D3007CD02C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		779FC4F1161700D3007CD02C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		779FC4EE161700D3007CD02C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779FC500161700D3007CD02C /* ISRemoveNullTests.m in Sources */,
+				779FC50616170186007CD02C /* NSDictionary+RemoveNull.m in Sources */,
+				779FC50716170186007CD02C /* NSArray+RemoveNull.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		779FC4FB161700D3007CD02C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				779FC4FC161700D3007CD02C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77322E1B1616FB11006CE070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		77322E1C1616FB11006CE070 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		779FC503161700D3007CD02C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISRemoveNullTests/ISRemoveNullTests-Prefix.pch";
+				INFOPLIST_FILE = "ISRemoveNullTests/ISRemoveNullTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		779FC504161700D3007CD02C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISRemoveNullTests/ISRemoveNullTests-Prefix.pch";
+				INFOPLIST_FILE = "ISRemoveNullTests/ISRemoveNullTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77322DF91616FB11006CE070 /* Build configuration list for PBXProject "ISRemoveNull" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77322E1B1616FB11006CE070 /* Debug */,
+				77322E1C1616FB11006CE070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		779FC502161700D3007CD02C /* Build configuration list for PBXNativeTarget "ISRemoveNullTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779FC503161700D3007CD02C /* Debug */,
+				779FC504161700D3007CD02C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77322DF61616FB11006CE070 /* Project object */;
+}
