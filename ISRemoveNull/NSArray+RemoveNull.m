@@ -21,13 +21,13 @@
         if (recursive) {
             if ([item isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *validatedItem = [item dictionaryByRemovingNullRecursively:YES];
-                [validated replaceObjectAtIndex:[self indexOfObject:item]
+                [validated replaceObjectAtIndex:[validated indexOfObject:item]
                                      withObject:validatedItem];
             }
             
             if ([item isKindOfClass:[NSArray class]]) {
                 NSArray *validatedItem = [item arrayByRemovingNullRecursively:YES];
-                [validated replaceObjectAtIndex:[self indexOfObject:item]
+                [validated replaceObjectAtIndex:[validated indexOfObject:item]
                                      withObject:validatedItem];
             }
         }
