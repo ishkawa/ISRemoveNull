@@ -1,4 +1,4 @@
-# ISRemoveNull [![Build Status](https://travis-ci.org/ishkawa/ISRemoveNull.png?branch=master)](https://travis-ci.org/ishkawa/ISRemoveNull)
+# ISRemoveNull [![Build Status](https://travis-ci.org/ishkawa/ISRemoveNull.png?branch=master)](https://travis-ci.org/ishkawa/ISRemoveNull) [![Coverage Status](https://coveralls.io/repos/ishkawa/ISRemoveNull/badge.png?branch=master)](https://coveralls.io/r/ishkawa/ISRemoveNull?branch=master)
 
 ISRemoveNull is extension to remove `NSNull` from `NSDictionary` and `NSArray`.  
 
