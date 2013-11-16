@@ -7,110 +7,106 @@
 
 - (void)testRemoveNullInDictionary
 {
-    NSDictionary *valid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"piyo" : @"piyo",
+    NSDictionary *dictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"null": [NSNull null],
+        @"piyo": @"piyo",
     };
     
-    NSDictionary *invalid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"null" : [NSNull null],
-        @"piyo" : @"piyo",
+    NSDictionary *expectedDictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"piyo": @"piyo",
     };
     
-    STAssertEqualObjects([invalid dictionaryByRemovingNull], valid, nil);
+    STAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary, nil);
 }
 
 - (void)testRemoveNullInNestedDictionary
 {
-    NSDictionary *subValid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"piyo" : @"piyo",
+    NSDictionary *dictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"null": [NSNull null],
+        @"piyo": @"piyo",
+        @"nest": @{
+            @"hoge": @"hoge",
+            @"fuga": @"fuga",
+            @"null": [NSNull null],
+            @"piyo": @"piyo",
+        },
     };
     
-    NSDictionary *subInvalid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"null" : [NSNull null],
-        @"piyo" : @"piyo",
+    NSDictionary *expectedDictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"piyo": @"piyo",
+        @"nest": @{
+            @"hoge": @"hoge",
+            @"fuga": @"fuga",
+            @"piyo": @"piyo",
+        },
     };
     
-    NSDictionary *valid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"piyo" : @"piyo",
-        @"nest" : subValid
-    };
-    
-    NSDictionary *invalid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"null" : [NSNull null],
-        @"piyo" : @"piyo",
-        @"nest" : subInvalid
-    };
-    
-    STAssertEqualObjects([invalid dictionaryByRemovingNull], valid, nil);
+    STAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary, nil);
 }
 
 - (void)testRemoveNullInDictionaryInArray
 {
-    NSDictionary *subValid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"piyo" : @"piyo",
+    NSDictionary *dictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"null": [NSNull null],
+        @"piyo": @"piyo",
     };
     
-    NSDictionary *subInvalid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"null" : [NSNull null],
-        @"piyo" : @"piyo",
+    NSDictionary *expectedDictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"piyo": @"piyo",
     };
     
-    NSArray *valid = @[ @"hoge", @"fuga", subValid, @"piyo" ];
-    NSArray *invalid = @[ @"hoge", @"fuga", [NSNull null], subInvalid, @"piyo" ];
+    NSArray *array = @[@"hoge", @"fuga", [NSNull null], dictionary, @"piyo"];
+    NSArray *expectedArray = @[@"hoge", @"fuga", expectedDictionary, @"piyo"];
     
-    STAssertEqualObjects([invalid arrayByRemovingNull], valid, nil);
+    STAssertEqualObjects([array arrayByRemovingNull], expectedArray, nil);
 }
 
 - (void)testRemoveNullInArray
 {
-    NSArray *valid = @[ @"hoge", @"fuga", @"piyo" ];
-    NSArray *invalid = @[ @"hoge", @"fuga", [NSNull null], @"piyo" ];
+    NSArray *array = @[@"hoge", @"fuga", [NSNull null], @"piyo"];
+    NSArray *expectedArray = @[@"hoge", @"fuga", @"piyo"];
     
-    STAssertEqualObjects([invalid arrayByRemovingNull], valid, nil);
+    STAssertEqualObjects([array arrayByRemovingNull], expectedArray, nil);
 }
 
 - (void)testRemoveNullInNestedArray
 {
-    NSArray *valid = @[ @"hoge", @[@"hoge", @"fuga", @"piyo"]];
-    NSArray *invalid = @[ @"hoge", @[@"hoge", @"fuga", [NSNull null], @"piyo"]];
+    NSArray *array = @[@"hoge", @[@"hoge", @"fuga", [NSNull null], @"piyo"]];
+    NSArray *expectedArray = @[@"hoge", @[@"hoge", @"fuga", @"piyo"]];
     
-    STAssertEqualObjects([invalid arrayByRemovingNull], valid, nil);
+    STAssertEqualObjects([array arrayByRemovingNull], expectedArray, nil);
 }
 
 - (void)testRemoveNullInArrayInDictionary
 {
-    NSDictionary *valid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"piyo" : @"piyo",
-        @"nest" : @[ @"hoge", @"fuga", @"piyo" ]
+    NSDictionary *dictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"null": [NSNull null],
+        @"piyo": @"piyo",
+        @"nest": @[@"hoge", @"fuga", [NSNull null], @"piyo"]
     };
     
-    NSDictionary *invalid = @{
-        @"hoge" : @"hoge",
-        @"fuga" : @"fuga",
-        @"null" : [NSNull null],
-        @"piyo" : @"piyo",
-        @"nest" : @[ @"hoge", @"fuga", [NSNull null], @"piyo" ]
+    NSDictionary *expectedDictionary = @{
+        @"hoge": @"hoge",
+        @"fuga": @"fuga",
+        @"piyo": @"piyo",
+        @"nest": @[@"hoge", @"fuga", @"piyo"]
     };
     
-    STAssertEqualObjects([invalid dictionaryByRemovingNull], valid, nil);
+    STAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary, nil);
 }
 
 @end

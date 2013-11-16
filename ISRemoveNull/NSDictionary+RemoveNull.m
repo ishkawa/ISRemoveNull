@@ -10,28 +10,29 @@
 
 - (id)dictionaryByRemovingNullRecursively:(BOOL)recursive
 {
-    NSMutableDictionary *validated = [NSMutableDictionary dictionaryWithDictionary:self];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:self];
     
     for (id key in [self allKeys]) {
-        id item = [self objectForKey:key];
+        id object = [self objectForKey:key];
         
-        if ([item isKindOfClass:[NSNull class]]) {
-            [validated removeObjectForKey:key];
+        if (object == [NSNull null]) {
+            [dictionary removeObjectForKey:key];
         }
+        
         if (recursive) {
-            if ([item isKindOfClass:[NSDictionary class]]) {
-                NSDictionary *validatedItem = [item dictionaryByRemovingNullRecursively:YES];
-                [validated setValue:validatedItem forKey:key];
+            if ([object isKindOfClass:[NSDictionary class]]) {
+                NSDictionary *subdictionary = [object dictionaryByRemovingNullRecursively:YES];
+                [dictionary setValue:subdictionary forKey:key];
             }
             
-            if ([item isKindOfClass:[NSArray class]]) {
-                NSArray *validatedItem = [item arrayByRemovingNullRecursively:YES];
-                [validated setValue:validatedItem forKey:key];
+            if ([object isKindOfClass:[NSArray class]]) {
+                NSArray *subarray = [object arrayByRemovingNullRecursively:YES];
+                [dictionary setValue:subarray forKey:key];
             }
         }
     }
     
-    return [NSDictionary dictionaryWithDictionary:validated];
+    return [dictionary copy];
 }
 
 @end
