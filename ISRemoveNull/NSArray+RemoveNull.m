@@ -10,31 +10,29 @@
 
 - (id)arrayByRemovingNullRecursively:(BOOL)recursive
 {
-    NSMutableArray *nullItems = [NSMutableArray array];
-    NSMutableArray *validated = [NSMutableArray arrayWithArray:self];
+    NSMutableArray *array = [self mutableCopy];
     
-    for (id item in self) {
-        if ([item isKindOfClass:[NSNull class]]) {
-            [nullItems addObject:item];
+    for (id object in self) {
+        if (object == [NSNull null]) {
+            [array removeObject:object];
         }
         
         if (recursive) {
-            if ([item isKindOfClass:[NSDictionary class]]) {
-                NSDictionary *validatedItem = [item dictionaryByRemovingNullRecursively:YES];
-                [validated replaceObjectAtIndex:[validated indexOfObject:item]
-                                     withObject:validatedItem];
+            if ([object isKindOfClass:[NSDictionary class]]) {
+                NSInteger index = [array indexOfObject:object];
+                NSDictionary *subdictionary = [object dictionaryByRemovingNullRecursively:YES];
+                [array replaceObjectAtIndex:index withObject:subdictionary];
             }
             
-            if ([item isKindOfClass:[NSArray class]]) {
-                NSArray *validatedItem = [item arrayByRemovingNullRecursively:YES];
-                [validated replaceObjectAtIndex:[validated indexOfObject:item]
-                                     withObject:validatedItem];
+            if ([object isKindOfClass:[NSArray class]]) {
+                NSInteger index = [array indexOfObject:object];
+                NSArray *subarray = [object arrayByRemovingNullRecursively:YES];
+                [array replaceObjectAtIndex:index withObject:subarray];
             }
         }
     }
-    [validated removeObjectsInArray:nullItems];
     
-    return [NSArray arrayWithArray:validated];
+    return [array copy];
 }
 
 @end
