@@ -5,7 +5,7 @@ ISRemoveNull is extension of NSArray and NSDictionary to remove NSNull from them
 ## Usage
 
 - add files under `ISRemoveNull/`
-- import `ISRemoveNull.h` in `prefix.pch`
+- import `ISRemoveNull.h`
 - remove NSNull from NSDictionary
 
 ```objectivec
