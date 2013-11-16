@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "ISRemoveNull"
-  s.version      = "0.0.1"
-  s.summary      = "remove NSNull from NSArray/NSDictionary"
+  s.version      = "0.0.2"
+  s.summary      = "extension of NSArray and NSDictionary to remove NSNull from them."
   s.homepage     = "https://github.com/ishkawa/ISRemoveNull"
-  s.author       = { "Yosuke Ishikawa" => "ishkawa73@gmail.com" }
-  s.source       = { :git => "https://github.com/ishkawa/ISRemoveNull.git", :tag => "0.0.1" }
+  s.author       = { "Yosuke Ishikawa" => "y@ishkawa.org" }
+  s.source       = { :git => "https://github.com/ishkawa/ISRemoveNull.git", :tag => "0.0.2" }
   s.platform     = :ios, '4.0'
+  s.requires_arc = true
   s.source_files = 'Classes', 'ISRemoveNull/**/*.{h,m}'
   s.license      = {
     :type => 'MIT',
