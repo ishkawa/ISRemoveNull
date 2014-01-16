@@ -1,5 +1,9 @@
-#import "ISRemoveNullTests.h"
+#import <XCTest/XCTest.h>
 #import "ISRemoveNull.h"
+
+@interface ISRemoveNullTests : XCTestCase
+
+@end
 
 @implementation ISRemoveNullTests
 
@@ -20,7 +24,7 @@
         @"piyo": @"piyo",
     };
     
-    STAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary, nil);
+    XCTAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary);
 }
 
 - (void)testRemoveNullInNestedDictionary
@@ -49,7 +53,7 @@
         },
     };
     
-    STAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary, nil);
+    XCTAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary);
 }
 
 - (void)testRemoveNullInDictionaryInArray
@@ -70,7 +74,7 @@
     NSArray *array = @[@"hoge", @"fuga", [NSNull null], dictionary, @"piyo"];
     NSArray *expectedArray = @[@"hoge", @"fuga", expectedDictionary, @"piyo"];
     
-    STAssertEqualObjects([array arrayByRemovingNull], expectedArray, nil);
+    XCTAssertEqualObjects([array arrayByRemovingNull], expectedArray);
 }
 
 - (void)testRemoveNullInArray
@@ -78,7 +82,7 @@
     NSArray *array = @[@"hoge", @"fuga", [NSNull null], @"piyo"];
     NSArray *expectedArray = @[@"hoge", @"fuga", @"piyo"];
     
-    STAssertEqualObjects([array arrayByRemovingNull], expectedArray, nil);
+    XCTAssertEqualObjects([array arrayByRemovingNull], expectedArray);
 }
 
 - (void)testRemoveNullInNestedArray
@@ -86,7 +90,7 @@
     NSArray *array = @[@"hoge", @[@"hoge", @"fuga", [NSNull null], @"piyo"]];
     NSArray *expectedArray = @[@"hoge", @[@"hoge", @"fuga", @"piyo"]];
     
-    STAssertEqualObjects([array arrayByRemovingNull], expectedArray, nil);
+    XCTAssertEqualObjects([array arrayByRemovingNull], expectedArray);
 }
 
 - (void)testRemoveNullInArrayInDictionary
@@ -106,7 +110,7 @@
         @"nest": @[@"hoge", @"fuga", @"piyo"]
     };
     
-    STAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary, nil);
+    XCTAssertEqualObjects([dictionary dictionaryByRemovingNull], expectedDictionary);
 }
 
 @end
