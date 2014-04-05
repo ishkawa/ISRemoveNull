@@ -35,7 +35,7 @@ NSArray *strippedArray = [array arrayByRemovingNull];
 ### Installation with CocoaPods
 
 ```
-pod 'ISRemoveNull', :git => 'git@github.com:ishkawa/ISRemoveNull.git'
+pod 'ISRemoveNull'
 ```
 
 ## License
